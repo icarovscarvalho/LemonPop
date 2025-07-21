@@ -18,7 +18,7 @@ export function Header() {
   }
 
   return(
-    <header className="flex items-center place-content-between bg-white w-full h-fit my-[20px] py-[15px] px-[20px] rounded-4xl shadow-md/20">
+    <header className="flex items-center place-content-between bg-white w-full h-fit my-[50px] py-[15px] px-[20px] rounded-4xl shadow-md/20">
       <img src="./assets/LemonPopLogo.png" alt="LemonPop Logo" className="w-[10rem]" />
       <NavBar />
       <div className="relative flex items-center h-fit border border-white hover:border-neutral-800 rounded-3xl">
