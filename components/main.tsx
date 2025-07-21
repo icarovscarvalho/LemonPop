@@ -4,18 +4,12 @@ import {
   IoIosSkipBackward,
   IoIosSkipForward
 } from "react-icons/io";
-import {
-  IoMusicalNotesOutline,
-  IoMusicalNotesSharp,
-  IoTimer,
-  IoTimerOutline
-} from "react-icons/io5";
-import { FaVolumeMute, FaVolumeUp, FaRegCompass, FaCompass } from "react-icons/fa";
+import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa6";
 import { LiaRandomSolid } from "react-icons/lia";
-import { HiAdjustmentsHorizontal, HiOutlineAdjustmentsHorizontal } from "react-icons/hi2";
-import { MdChatBubbleOutline, MdChatBubble } from "react-icons/md";
+
 import { MainButtons } from "./mainButtons";
+import { MainDisplay } from "./mainDisplay";
 
 export function Main() {
 
@@ -49,9 +43,7 @@ export function Main() {
       </div>
       <div className="flex flex-col justify-between gap-4 w-full">
         <MainButtons />
-        <div className="flex flex-col h-full rounded-xl bg-white">
-
-        </div>
+        <MainDisplay />
         <div className="flex flex-col justify-center items-center w-full mb-10">
           <p>Está curtindo seu momento aqui?</p>
           <a href="#">

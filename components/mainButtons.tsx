@@ -30,7 +30,7 @@ export function MainButtons() {
     {
       icon: <IoTimerOutline />,
       hover: <IoTimer />,
-      text: 'Pomodore'
+      text: 'Pomo'
     },
     {
       icon: <MdChatBubbleOutline />,
@@ -46,7 +46,7 @@ export function MainButtons() {
       {iconsList.map((il, index) => (
         <div
           key={index}
-          className="flex flex-col items-center cursor-pointer active:scale-[0.95]"
+          className="flex flex-col items-center p-[5px] w-[70px] cursor-pointer rounded-md hover:bg-amber-400 hover:inset-shadow-sm active:scale-[0.95] transition duration-150"
           onMouseEnter={() => setHoverIndex(index)}
           onMouseLeave={() => setHoverIndex(null)}
         >
