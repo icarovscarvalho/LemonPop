@@ -17,10 +17,10 @@ export function Main() {
   const channelYBLink = 'https://www.youtube.com/@DreamhopMusic'
 
   return(
-    <main className="flex itens-center justify-between gap-10 w-full h-full">
+    <main className="flex-row itens-center justify-between gap-10 h-fit md:flex">
       <div>
         <div>
-          <iframe width="560" height="315" src={lofiYBLink} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="rounded-xl" />
+          <iframe src={lofiYBLink} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="rounded-xl aspect-2/1 md:w-[560px] md:h-[315px]" />
           {/* <div className="flex items-center gap-3 py-[7px] px-[20px] w-fit bg-white rounded-2xl">
             <IoIosHeartEmpty />
             <IoIosSkipBackward />
@@ -30,7 +30,7 @@ export function Main() {
             <FaVolumeUp />
           </div> */}
         </div>
-        <div className="flex items-center justify-start gap-5 px-[10px] py-[3px] mt-2 rounded-md bg-white">
+        <div className="flex flex-col  justify-start px-[10px] py-[3px] mt-2 h-fit rounded-md bg-white md:flex-row md:items-center md:gap-5">
           <div className="flex gap-1 max-w-[250px]">
             <p><strong>canal:</strong></p>
             <p className="truncate"><a href={channelYBLink} target="_Blank">Dreamhop Music</a></p>
@@ -41,14 +41,14 @@ export function Main() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-between gap-4 w-full">
+      <div className="flex flex-col justify-between gap-4 pt-4 h-fit">
         <MainButtons />
         <MainDisplay />
         <div className="flex flex-col justify-center items-center w-full mb-10">
           <p>Está curtindo seu momento aqui?</p>
           <a href="#">
-            <button className="flex items-center justify-center gap-4 py-[5px] px-[20px] min-w-[300px] text-white rounded-4xl cursor-pointer bg-neutral-800 hover:text-yellow-500 active:scale-[0.95]">
-              <p>Me pague uma limonada</p>
+            <button className="flex items-center justify-center gap-4 py-[5px] px-[20px] min-w-[200px] text-white rounded-4xl cursor-pointer bg-neutral-800 hover:text-yellow-500 active:scale-[0.95]">
+              <p className="text-wrap">Me pague uma limonada</p>
               <img src="./assets/LemonPopIcon.png" className="w-[30px] h-[30px]" />
             </button>
           </a>

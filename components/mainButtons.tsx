@@ -42,7 +42,7 @@ export function MainButtons() {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
 
   return (
-    <div className="flex justify-between text-4xl gap-6">
+    <div className="flex justify-between flex-wrap-reverse text-4xl gap-6">
       {iconsList.map((il, index) => (
         <div
           key={index}
