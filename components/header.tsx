@@ -2,13 +2,16 @@
 
 import { useEffect, useState } from "react";
 import { NavBar } from "./navBar";
-// import { IoMdArrowDropdown } from "react-icons/io";
-// import { DropDown } from "./dropDown";
+
+import { BsArrowRightSquare, BsArrowRightSquareFill } from "react-icons/bs";
+import { IoIosMenu } from "react-icons/io";
 
 export function Header() {
 
   const [display, setDisplay] = useState<string>('hidden')
-  const [dropDownMenuBtn, setDropDownMenuBtn] = useState<boolean>(false)
+  const [dropDownLangBtn, setDropDownLangBtn] = useState<boolean>(false)
+  const [menu, setMenu] = useState<string>('flex')
+  const [toggleMenuBtn, setToggleMenuBtn] = useState<boolean>(false)
   const [lang, setLang ] = useState<string>('')
   const [country, setCountry ] = useState<string>('')
 
@@ -18,8 +21,8 @@ export function Header() {
   },[])
 
   function handleToggleButton() {
-    setDropDownMenuBtn(prev => !prev)
-    dropDownMenuBtn !== true
+    setDropDownLangBtn(prev => !prev)
+    dropDownLangBtn !== true
     ? setDisplay('flex')
     : setDisplay('hidden')
   }
@@ -30,15 +33,29 @@ export function Header() {
     console.log(country)
   }
 
+  function handleToggleMenuButton() {
+    setToggleMenuBtn(prev => !prev)
+    toggleMenuBtn !== true
+    ? setMenu('flex')
+    : setMenu('hidden')
+  }
+
   return(
-    <header className="flex items-center place-content-between bg-white w-full h-fit my-[50px] py-[15px] px-[20px] rounded-4xl shadow-md/20">
-      <img src="./assets/LemonPopLogo.png" alt="LemonPop Logo" className="w-[7rem] md:w-[10rem]" />
-        <NavBar
-          display={display}
-          country={country}
-          handleToggleLang={handleToggleLang}
-          handleToggleButton={handleToggleButton}
+    <header className="flex flex-col items-center justify-center gap-5 w-full h-fit mb-[50px] p-[20px] shadow-md/20 bg-white md:flex-row md:justify-between md:rounded-4xl md:mt-[50px]">
+      <div className="flex items-center justify-between w-[100%] md:w-fit">
+        <img src="./assets/LemonPopLogo.png" alt="LemonPop Logo" className="w-[10rem]" />
+        <IoIosMenu
+        onClick={handleToggleMenuButton}
+          className="text-3xl hover:scale-105 cursor-pointer md:hidden"
         />
+      </div>
+      <NavBar
+        display={display}
+        country={country}
+        handleToggleLang={handleToggleLang}
+        handleToggleButton={handleToggleButton}
+        menuMobileButton={menu}
+      />
     </header>
   )
 }

@@ -1,5 +1,4 @@
-import { IoMdArrowDropdown, IoIosMenu } from "react-icons/io";
-import { BsArrowRightSquare, BsArrowRightSquareFill } from "react-icons/bs";
+import { IoMdArrowDropdown } from "react-icons/io";
 import { DropDown } from "./dropDown";
 
 interface NavBarProps {
@@ -7,16 +6,17 @@ interface NavBarProps {
   country: string
   handleToggleLang: (country: string, lang: string) => void
   handleToggleButton: () => void
+  menuMobileButton: string
 }
 
 
-export function NavBar({display, country, handleToggleLang, handleToggleButton}:NavBarProps) {
+export function NavBar({display, country, handleToggleLang, handleToggleButton, menuMobileButton}:NavBarProps) {
 
   const menus = ['Escute', 'Descubra', 'Contato']
 
   return(
-    <nav className="flex gap-2 justify-items-center items-center">
-      <div className="flex hidden md:flex">
+    <nav className={`flex gap-2 justify-items-center ${menuMobileButton} md:flex`}>
+      <div className="flex flex-col md:flex-row">
         {menus.map( menu =>
           <a href="#" key={menu} className="py-[5px] px-[10px] hover:bg-yellow-500 transition rounded-2xl hover:shadow-md/10 hover:-translate-y-0.5 duration-300 ease-in-out">{menu}</a>
         )}
@@ -31,11 +31,6 @@ export function NavBar({display, country, handleToggleLang, handleToggleButton}:
           </div>
           <DropDown display={display} handleToggleLang={handleToggleLang} />
         </div>
-      </div>
-      <div className="flex flex text-2xl cursor-pointer hover:scale-103 md:hidden">
-        <IoIosMenu />
-        <BsArrowRightSquare />
-        <BsArrowRightSquareFill />
       </div>
     </nav>
   )
