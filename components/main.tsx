@@ -18,7 +18,7 @@ export function Main() {
 
   return(
     <main className="flex flex-col itens-center justify-between gap-10 h-fit md:flex-row">
-      <div className="flex flex-col gap-2 h-fit bg-red-300">
+      <div className="flex flex-col gap-2 h-fit">
         <div>
           <iframe src={lofiYBLink} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="rounded-xl aspect-2/1 md:w-[560px] md:h-[315px]" />
           {/* <div className="flex items-center gap-3 py-[7px] px-[20px] w-fit bg-white rounded-2xl">
