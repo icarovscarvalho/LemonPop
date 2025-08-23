@@ -10,7 +10,7 @@ export function Header() {
 
   const [display, setDisplay] = useState<string>('hidden')
   const [dropDownLangBtn, setDropDownLangBtn] = useState<boolean>(false)
-  const [menu, setMenu] = useState<string>('flex')
+  const [menu, setMenu] = useState<string>('hidden')
   const [toggleMenuBtn, setToggleMenuBtn] = useState<boolean>(false)
   const [lang, setLang ] = useState<string>('')
   const [country, setCountry ] = useState<string>('')
