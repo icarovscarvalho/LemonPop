@@ -53,7 +53,7 @@ export function Footer() {
 
   return (
     <footer className="w-full bg-neutral-800">
-      <div className="flex flex-col items-center gap-8 md:px-[10vw] px-[10vw] py-[20px] w-full md:max-w-[1500px] h-fit">
+      <div className="flex flex-col items-center justify-center gap-8 px-4 py-10 w-full h-fit md:px-[20vw]">
         <img
           src="./assets/LemonPopLogo.png"
           alt="LemonPop Logo"
@@ -73,7 +73,7 @@ export function Footer() {
         </div>
 
         {/* Formulário */}
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2 w-full">
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 w-full md:max-w-[800px]">
           {/* Título */}
           <input
             type="text"
@@ -110,13 +110,15 @@ export function Footer() {
           </div>
 
           {/* Botão */}
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="flex justify-center py-2 w-full text-white border-2 rounded-2xl cursor-pointer hover:bg-white hover:text-neutral-800 transition disabled:opacity-50"
-          >
-            {isSubmitting ? "Enviando..." : "Mandar mensagem"}
-          </button>
+          <div className="flex w-full md:justify-end">
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="flex justify-center py-2 px-4 w-full text-white border-2 rounded-2xl cursor-pointer md:w-fit hover:bg-white hover:text-neutral-800 transition disabled:opacity-50"
+            >
+              {isSubmitting ? "Enviando..." : "Mandar mensagem"}
+            </button>
+          </div>
         </form>
 
         {/* Social */}
