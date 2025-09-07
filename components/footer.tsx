@@ -52,10 +52,10 @@ export function Footer() {
   }
 
   return (
-    <footer className="flex flex-col items-start justify-center gap-10 px-4 py-10 w-full h-fit md:flex-row bg-neutral-800">
+    <footer className="flex flex-col items-center justify-between gap-20 px-20 py-10 w-full h-fit md:flex-row bg-neutral-800">
 
-      <div className="flex flex-col gap-6 xl:flex-row">
-        <div className="flex flex-col items-center">
+      <div className="flex flex-col justify-around gap-30 w-full xl:flex-row">
+        <div className="flex flex-col items-center gap-5">
           <img
             src="./assets/LemonPopLogo.png"
             alt="LemonPop Logo"
@@ -65,8 +65,8 @@ export function Footer() {
             <img src="./assets/LemonPopMascote.png" alt="LemonPop Logo" className="w-[10rem]" />
           </div>
         </div>
-        <div className="flex flex-col items-center justify-between gap-6 md:max-w-[400px]">
-          <div className="text-white text-center">
+        <div className=" flex flex-col items-center justify-between gap-6 md:max-w-[800px]">
+          <div className="text-white text-start">
             <p>
               “Programar é a minha vibe — e o lofi é o que acalma meus pensamentos. Juntos eles
               constroem um mundo onde tudo faz sentido.”
@@ -83,6 +83,9 @@ export function Footer() {
           </div>
         </div>
       </div>
+
+      {/* Toast Container */}
+      <ToastContainer />
 
       {/* Formulário */}
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col justify-between h-full gap-4 w-full md:max-w-[400px]">
@@ -132,8 +135,6 @@ export function Footer() {
           </button>
         </div>
       </form>
-      {/* Toast Container */}
-      <ToastContainer />
     </footer>
   );
 }
