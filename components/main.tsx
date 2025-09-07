@@ -17,7 +17,7 @@ export function Main() {
   const channelYBLink = 'https://www.youtube.com/@DreamhopMusic'
 
   return(
-    <main className="flex flex-col itens-center justify-between gap-10 h-fit md:flex-row">
+    <main className="flex flex-col itens-center justify-between gap-10 h-fit xl:flex-row">
       <div className="flex flex-col gap-2 h-fit">
         <div>
           <iframe src={lofiYBLink} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="rounded-xl aspect-3/2 md:w-[560px] md:h-[315px]" />
