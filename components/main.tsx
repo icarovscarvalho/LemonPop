@@ -8,6 +8,7 @@ import { toSunnyDays } from "../utils/toSunnyDays";
 import { toStopOverThink } from "../utils/toStopOverThink";
 
 import { useEffect, useState } from "react";
+import { AdSpace } from "./adSpace";
 
 type MusicItem = {
   channel: string;
@@ -140,9 +141,8 @@ export function Main() {
           </details>
         </div>
 
-        <div className="flex mt-5 h-[150px] w-full rounded-xl bg-gray-200 shadow-md/20">
-          Aqui vai uma propagando do google add
-        </div>
+        <AdSpace />
+        
       </div>
 
       <div className="flex flex-col justify-between gap-4 pt-4 h-fit">
@@ -151,7 +151,7 @@ export function Main() {
         <div className="flex flex-col justify-center items-center gap-4 w-full mb-10">
           <p>Está curtindo seu momento aqui?</p>
           <a href="#">
-            <button className="flex items-center justify-center gap-4 py-[5px] px-[20px] min-w-[200px] text-white rounded-4xl cursor-pointer bg-neutral-800 hover:text-yellow-500 active:scale-[0.95]">
+            <button className="flex items-center justify-center gap-4 py-[5px] px-[20px] min-w-[200px] text-white rounded-4xl cursor-pointer bg-neutral-800 hover:text-yellow-500 active:scale-[0.95] hover:scale-102 transition">
               <p className="text-wrap">Me pague uma limonada</p>
               <img src="./assets/LemonPopIcon.png" className="w-[30px] h-[30px]" />
             </button>

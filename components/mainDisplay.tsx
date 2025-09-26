@@ -38,21 +38,21 @@ export function MainDisplay({handleChangePlayList}:MainDisplayProps) {
       <h2 className="text-xl">Outras Vibes</h2>
       <div className="flex justify-between gap-2 h-full w-full overflow-auto">
         {playListData.map( item => 
-          <div key={item.text} className="group relative bg-zinc-900 rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer">
+          <div key={item.text} className="group relative bg-zinc-900 rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
             <div className="relative overflow-hidden h-80">
               <img 
                 src={`./assets/${item.img}.png`} 
-                alt="Smart Watch" 
+                alt={item.title} 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute top-4 right-4">
-                <button className="bg-white/90 text-gray-800 p-2 rounded-full shadow-md transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 hover:bg-red-500 hover:text-white">
+                <div className="bg-white/90 text-gray-800 p-2 rounded-full shadow-md transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                   {item.icon}
-                </button>
+                </div>
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                <button className="w-full bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors duration-300 flex items-center justify-center gap-2">
+                <button className="flex items-center justify-center gap-2 w-full bg-amber-400 text-white py-2 rounded-lg font-medium hover:bg-amber-500 transition-colors duration-300 cursor-pointer">
                   <p 
                     className="fas fa-shopping-cart "
                     onClick={() => {
@@ -66,11 +66,11 @@ export function MainDisplay({handleChangePlayList}:MainDisplayProps) {
               </div>
               <span className="absolute top-4 left-4 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-pulse-slow">NEW</span>
             </div>
-            <div className="p-5">
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="text-lg font-bold text-amber-500">{item.title}</h3>
-                  <p className="text-white text-sm">{item.text}</p>
+            <div className="h-full w-full p-5">
+              <div className="h-fit">
+                <div className="flex flex-col gap-2">
+                  <h3 className="text-lg font-bold text-amber-500 whitespace-normal break-words">{item.title}</h3>
+                  <p className="text-white text-sm whitespace-normal break-words">{item.text}</p>
                 </div>
               </div>
             </div>
