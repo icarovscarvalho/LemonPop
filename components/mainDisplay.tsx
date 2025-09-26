@@ -1,3 +1,4 @@
+import { IoMusicalNotesSharp } from "react-icons/io5"
 
 
 export function MainDisplay() {
@@ -6,22 +7,26 @@ export function MainDisplay() {
     {
       img: 'PlayListImg1',
       title: 'Dia de Sol — Para Aproveitar',
-      text: 'A vibe certa pro seu dia brilhar. Leve, doce e com energia de verão o ano todo — Música boa com gosto de liberdade.'
+      text: 'A vibe certa pro seu dia brilhar. Leve, doce e com energia de verão o ano todo — Música boa com gosto de liberdade.',
+      icon: <IoMusicalNotesSharp />,
     },
     {
       img: 'PlayListImg2',
       title: 'Imersivas — Para Imaginar',
-      text: 'Mergulhe em atmosferas sonoras que despertam mundos dentro de você. Solte a mente, flutue nas notas — Imaginação tem trilha sonora.'
+      text: 'Mergulhe em atmosferas sonoras que despertam mundos dentro de você. Solte a mente, flutue nas notas — Imaginação tem trilha sonora.',
+      icon: <IoMusicalNotesSharp />,
     },
     {
       img: 'PlayListImg3',
       title: 'Calmas — Para Estudar',
-      text: 'Foco sem esforço. Loops suaves para manter a mente leve e produtiva — O som do seu melhor momento de concentração.'
+      text: 'Foco sem esforço. Loops suaves para manter a mente leve e produtiva — O som do seu melhor momento de concentração.',
+      icon: <IoMusicalNotesSharp />,
     },
     // {
     //   img: 'PlayListImg4',
     //   title: 'Contemplativas — Para Pensar',
-    //   text: 'Pensamentos profundos merecem música à altura. Deixe as ideias fluírem com cada batida — Onde o silêncio pensa com ritmo.'
+    //   text: 'Pensamentos profundos merecem música à altura. Deixe as ideias fluírem com cada batida — Onde o silêncio pensa com ritmo.',
+    //   icon: <IoMusicalNotesSharp />,
     // },
   ]
 
@@ -30,11 +35,34 @@ export function MainDisplay() {
       <h2 className="text-xl">Outras Vibes</h2>
       <div className="flex justify-between gap-2 h-full w-full overflow-auto">
         {playListData.map( item => 
-          <div key={item.img} className="flex flex-col w-full h-full rounded-xl bg-amber-300 overflow-hidden cursor-pointer">
-            <img className=" h-full hover:scale-115 duration-700 ease-in-out" src={`./assets/${item.img}.png `} alt={`playlist para ${item.title}`} />
-            {/* <div className="flex h-full p-4 overflow-hidden">
-              <p className="text-center">{item.text}</p>
-            </div> */}
+          <div key={item.text} className="group relative bg-zinc-900 rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer">
+            <div className="relative overflow-hidden h-80">
+              <img 
+                src={`./assets/${item.img}.png`} 
+                alt="Smart Watch" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute top-4 right-4">
+                <button className="bg-white/90 text-gray-800 p-2 rounded-full shadow-md transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 hover:bg-red-500 hover:text-white">
+                  {item.icon}
+                </button>
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                <button className="w-full bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors duration-300 flex items-center justify-center gap-2">
+                  <i className="fas fa-shopping-cart "></i> Ouça agora
+                </button>
+              </div>
+              <span className="absolute top-4 left-4 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-pulse-slow">NEW</span>
+            </div>
+            <div className="p-5">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-lg font-bold text-amber-500">{item.title}</h3>
+                  <p className="text-white text-sm">{item.text}</p>
+                </div>
+              </div>
+            </div>
           </div>
         )}
       </div>
