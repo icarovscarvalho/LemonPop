@@ -1,3 +1,5 @@
+'use client'
+
 import {
   IoIosHeartEmpty,
   IoIosHeart,
@@ -12,17 +14,33 @@ import { MainButtons } from "./mainButtons";
 import { MainDisplay } from "./mainDisplay";
 
 import { toStudyList } from "../utils/toStudy";
+import { useEffect, useState } from "react";
 
 export function Main() {
 
-  const lofiYBLink = 'https://www.youtube.com/embed/kSl3VG-mzU4?si=fWjufTFzlz3nep1y'
-  const channelYBLink = 'https://www.youtube.com/@DreamhopMusic'
+  const [actualMusic, setActualMusic] = useState<string>(toStudyList[0].music)
+  const [actualChannel, setActualChannel] = useState<string>(toStudyList[0].channel)
+  const [actualLink, setActualLink] = useState<string>(toStudyList[0].link)
+
+  function chandeMusic(music: string, channel: string, link: string) {
+    if(actualMusic !== music) {
+      setActualMusic(music)
+      setActualChannel(channel)
+      setActualLink(link)
+    }
+  }
+
+  useEffect(() => {
+    console.log(actualMusic)
+    console.log(actualChannel)
+    console.log(actualChannel)
+  }, [actualMusic, actualChannel, actualLink])
 
   return(
     <main className="flex flex-col itens-center justify-between gap-10 h-fit xl:flex-row">
       <div className="flex flex-col gap-2 h-fit">
         <div>
-          <iframe src={toStudyList[0].link} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="rounded-xl aspect-3/2 md:w-[560px] md:h-[315px]" />
+          <iframe src={`${actualLink}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="rounded-xl aspect-3/2 md:w-[560px] md:h-[315px]" />
 
           {/* Mini Player */}
           {/* <div className="flex items-center gap-3 py-[7px] px-[20px] w-fit bg-white rounded-2xl">
@@ -36,14 +54,14 @@ export function Main() {
 
         </div>
         <div className="flex flex-col px-[10px] py-3 h-fit rounded-md bg-white">
-          <div className="flex flex-col justify-between pb-2 px-5 md:gap-5 md:flex-row">
+          <div className="flex flex-col pb-2 px-5 md:gap-5">
             <div className="flex gap-1 max-w-[250px]">
               <p><strong>canal:</strong></p>
-              <p className="truncate"><a href={toStudyList[0].channel} target="_Blank">Dreamhop Music</a></p>
+              <p className="truncate">{actualChannel}</p>
             </div>
-            <div className="flex gap-1  max-w-[270px]">
+            <div className="flex gap-1  w-full">
               <p><strong>Música:</strong></p>
-              <p>A Dreamy Lofi Mix</p>
+              <p  className="w-full">{actualMusic}</p>
             </div>
           </div>
           <details className="group py-4 px-5 border-1 rounded-md hover:bg-amber-100">
@@ -51,7 +69,7 @@ export function Main() {
               <span>Ver as próximas músicas</span>
               <span className="transition group-open:rotate-180">
                 <svg fill="none" height="24"
-                  shape-rendering="geometricPrecision"
+                  shapeRendering="geometricPrecision"
                   stroke="currentColor"
                     strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24"
                     width="24" className="dark:stroke-gray-400">
@@ -59,22 +77,24 @@ export function Main() {
                 </svg>
               </span>
             </summary>
-            <p className="mt-3 text-gray-600 group-open:animate-fadeIn dark:text-gray-300">
+            <div className="mt-3 text-gray-600 group-open:animate-fadeIn dark:text-gray-300">
               {toStudyList.map( (item, index) => 
-                <div key={index} className="pb-2 px-5 rounded-md md:gap-5 hover:bg-amber-400">
-                  <a href={item.link} target="_Blank" className="flex flex-col justify-between md:flex-row">
-                    <div className="flex gap-1 max-w-[250px]">
-                      <p><strong>canal:</strong>{item.channel}</p>
-                      <p className="truncate"></p>
-                    </div>
-                    <div className="flex gap-1 max-w-[270px]">
-                      <p><strong>Música:</strong></p>
-                      <p className="truncate">{item.music}</p>
-                    </div>
-                  </a>
+                <div
+                  key={index}
+                  onClick={()=> {chandeMusic(item.music, item.channel, item.link)}}
+                  className="flex flex-col justify-between pb-2 px-5 rounded-md md:gap-5 md:flex-row hover:bg-amber-400"
+                >
+                  <div className="flex gap-1 max-w-[250px]">
+                    <p><strong>canal:</strong>{item.channel}</p>
+                    <p className="truncate"></p>
+                  </div>
+                  <div className="flex gap-1 max-w-[270px]">
+                    <p><strong>Música:</strong></p>
+                    <p className="truncate">{item.music}</p>
+                  </div>
                 </div>
               )}
-            </p>
+            </div>
           </details>
         </div>
         <div className="flex mt-5 h-[150px] w-full rounded-xl bg-gray-200 shadow-md/20">
