@@ -1,7 +1,10 @@
 import { IoMusicalNotesSharp } from "react-icons/io5"
 
+interface MainDisplayProps {
+  handleChangePlayList: (playlist:string) => void
+}
 
-export function MainDisplay() {
+export function MainDisplay({handleChangePlayList}:MainDisplayProps) {
 
   const playListData = [
     {
@@ -50,7 +53,15 @@ export function MainDisplay() {
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                 <button className="w-full bg-indigo-600 text-white py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors duration-300 flex items-center justify-center gap-2">
-                  <i className="fas fa-shopping-cart "></i> Ouça agora
+                  <p 
+                    className="fas fa-shopping-cart "
+                    onClick={() => {
+                      handleChangePlayList(item.title)
+                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                    }}
+                  >
+                    Ouça agora
+                  </p>
                 </button>
               </div>
               <span className="absolute top-4 left-4 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-pulse-slow">NEW</span>

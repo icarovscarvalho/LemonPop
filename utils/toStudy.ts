@@ -1,4 +1,14 @@
-export const  toStudyList = [
+export const toStudy = [
+  {
+    channel: 'Lofi Girl',
+    music: 'lofi hip hop radio – beats to relax/study to',
+    link: 'https://www.youtube.com/embed/5qap5aO4i9A'
+  },
+  {
+    channel: 'Lofi Girl',
+    music: 'lofi hip hop radio – beats to study/relax to',
+    link: 'https://www.youtube.com/embed/7NOSDKb0HlU'
+  },
   {
     channel: 'Dreamhop Music',
     music: 'Lazy Mornings 🎣 A Dreamy Lofi Mix',
@@ -10,29 +20,9 @@ export const  toStudyList = [
     link: 'https://www.youtube.com/embed/8nXqcugV2Y4?si=zxDUSKtGBBNexg78',
   },
   {
-    channel: 'Dreamhop Music',
-    music: 'Heart Of The Forest 🌺 deep lofi hiphop beats',
-    link: 'https://www.youtube.com/embed/5STrZB6sm00?si=chdrzxiTP8nWU9Wb',
-  },
-  {
-    channel: 'Sweet Girl',
-    music: 'Stop Overthinking 🌘 Calm Down And Relax [ Chill Lofi Hip Hop Beats ] 🌘 Sweet Girl',
-    link: 'https://www.youtube.com/embed/k__gEeVPiLg?si=wODEa9HO6GeOKLKm',
-  },
-  {
-    channel: 'the bootleg boy',
-    music: 'Enchanted Forest 🍃 Chill Lofi Beats',
-    link: 'https://www.youtube.com/embed/7YmNvCy30FU?si=T_i8a1O9x-fZYfDo',
-  },
-  {
     channel: 'Cosmic Hippo',
     music: '3 A.M Coding Session - Chillstep Beats to Keep You Going',
     link: 'https://www.youtube.com/embed/Yd7vDterctQ?si=kvC-HAwLLC6LkqKQ',
-  },
-  {
-    channel: 'Sweet Girl',
-    music: 'Find your calm with peaceful lofi ☘ Chillhop melodies 🌱 Sleep/focus/relax [Space girl radio]',
-    link: 'https://www.youtube.com/embed/3l4vT5t4zMM?si=Otnup-oDev4J4-rK',
   },
   {
     channel: 'Lofi boost your mood',
@@ -40,10 +30,18 @@ export const  toStudyList = [
     link: 'https://www.youtube.com/embed/v9XyIGXcRck?si=spNz62_peQIb_cSn',
   },
   {
-    channel: 'Sweet Girl',
-    music: 'Lofi groove to keep you going 🌠 Sad lofi ~ calming flow [ lofi girl radio / hip hop beats ]',
-    link: 'https://www.youtube.com/embed/ARfGgX17YtA?si=1FiSoE4q43xb_pVS',
+    channel: 'The AMP Channel',
+    music: 'code-fi / lofi beats to code/relax to',
+    link: 'https://www.youtube.com/embed/f02mOEt11OQ?si=mVHtznxxn_T3NFtJ',
   },
+  {
+    channel: 'ChilledCow Archive',
+    music: 'Rainy Day Coding ☔️ lofi hip hop beats to focus',
+    link: 'https://www.youtube.com/embed/DWcJFNfaw9c',
+  },
+  {
+    channel: 'Study With Me',
+    music: 'Deep Focus 🎧 lofi hip hop beats to help you study',
+    link: 'https://www.youtube.com/embed/7NOSDKb0HlU',
+  }
 ]
-
-//Precisa alterar os links para o modo incorporar como iframe do youtube embed Link

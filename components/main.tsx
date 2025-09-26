@@ -1,18 +1,12 @@
 'use client'
 
-import {
-  IoIosHeartEmpty,
-  IoIosSkipBackward,
-  IoIosSkipForward
-} from "react-icons/io";
-import { FaVolumeUp } from "react-icons/fa";
-import { FaPlay } from "react-icons/fa6";
-import { LiaRandomSolid } from "react-icons/lia";
-
 import { MainButtons } from "./mainButtons";
 import { MainDisplay } from "./mainDisplay";
 
-import { toStudyList } from "../utils/toStudy";
+import { toStudy } from "../utils/toStudy";
+import { toSunnyDays } from "../utils/toSunnyDays";
+import { toStopOverThink } from "../utils/toStopOverThink";
+
 import { useEffect, useState } from "react";
 
 type MusicItem = {
@@ -22,9 +16,37 @@ type MusicItem = {
 };
 
 export function Main() {
-  const [actualMusic, setActualMusic] = useState<string>(toStudyList[0].music)
-  const [actualChannel, setActualChannel] = useState<string>(toStudyList[0].channel)
-  const [actualLink, setActualLink] = useState<string>(toStudyList[0].link)
+
+  const [currentPlayList, setCurrentPlayList] = useState<string>('toStudy')
+  const [currentList, setCurrentList] = useState<MusicItem[]>(toStudy)
+
+  const [currentMusic, setCurrentMusic] = useState<string>(toStudy[0].music)
+  const [currentChannel, setCurrentChannel] = useState<string>(toStudy[0].channel)
+  const [currentLink, setCurrentLink] = useState<string>(toStudy[0].link)
+
+  const playListsData = [
+    {title: 'Calmas — Para Estudar', value: toStudy},
+    {title: 'Imersivas — Para Imaginar', value: toStopOverThink},
+    {title: 'Dia de Sol — Para Aproveitar', value: toSunnyDays},
+  ]
+
+  function handleChangePlayList(playList: string) {
+    setCurrentPlayList(playList)
+
+    const found = playListsData.find(item => item.title === playList)
+    if (!found?.value) return null
+
+    playListsData.find( item => item.title === currentPlayList)?.value ?? null
+
+    setCurrentList(found.value)
+
+    // também já atualiza a música inicial
+    setCurrentMusic(found.value[0].music)
+    setCurrentChannel(found.value[0].channel)
+    setCurrentLink(found.value[0].link)
+
+    return found.value
+  }
 
   function getVisibleMusics(list: MusicItem[], currentMusic: string): MusicItem[] {
     const currentIndex = list.findIndex(item => item.music === currentMusic);
@@ -36,28 +58,26 @@ export function Main() {
     return list.slice(start, end + 1); // slice não inclui o último índice
   }
 
-  const visibleMusics = getVisibleMusics(toStudyList, actualMusic)
+  const visibleMusics = getVisibleMusics(currentList, currentMusic)
 
   function changeMusic(music: string, channel: string, link: string) {
-    if (actualMusic !== music) {
-      setActualMusic(music)
-      setActualChannel(channel)
-      setActualLink(link)
+    if (currentMusic !== music) {
+      setCurrentMusic(music)
+      setCurrentChannel(channel)
+      setCurrentLink(link)
     }
   }
 
   useEffect(() => {
-    console.log("🎵 Música:", actualMusic)
-    console.log("📺 Canal:", actualChannel)
-    console.log("🔗 Link:", actualLink)
-  }, [actualMusic, actualChannel, actualLink])
+    console.log(currentPlayList)
+  }, [currentPlayList])
 
   return (
     <main className="flex flex-col itens-center justify-between gap-10 h-fit xl:flex-row">
       <div className="flex flex-col gap-2 h-fit">
         <div>
           <iframe
-            src={actualLink}
+            src={currentLink}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             className="rounded-xl aspect-3/2 md:w-[560px] md:h-[315px]"
@@ -69,11 +89,11 @@ export function Main() {
           <div className="flex flex-col pb-2 px-5">
             <div className="flex gap-1 max-w-[250px]">
               <p><strong>canal:</strong></p>
-              <p className="truncate">{actualChannel}</p>
+              <p className="truncate">{currentChannel}</p>
             </div>
             <div className="flex gap-1  w-full">
               <p><strong>Música:</strong></p>
-              <p className="w-full">{actualMusic}</p>
+              <p className="w-full">{currentMusic}</p>
             </div>
           </div>
 
@@ -105,7 +125,7 @@ export function Main() {
                   key={index}
                   onClick={() => changeMusic(item.music, item.channel, item.link)}
                   className={`flex flex-col justify-between px-5 rounded-md md:gap-5 md:flex-row cursor-pointer
-                    ${actualMusic === item.music ? "bg-amber-400 text-white" : "hover:bg-amber-200"}`}
+                    ${currentMusic === item.music ? "bg-amber-400 text-white" : "hover:bg-amber-200"}`}
                 >
                   <div className="flex gap-1 max-w-[250px]">
                     <p className="truncate"><strong>canal:</strong>{item.channel}</p>
@@ -127,7 +147,7 @@ export function Main() {
 
       <div className="flex flex-col justify-between gap-4 pt-4 h-fit">
         <MainButtons />
-        <MainDisplay />
+        <MainDisplay handleChangePlayList={handleChangePlayList} />
         <div className="flex flex-col justify-center items-center gap-4 w-full mb-10">
           <p>Está curtindo seu momento aqui?</p>
           <a href="#">
