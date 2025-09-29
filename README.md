@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍋 LemonPop  
 
-## Getting Started
+![Mascote LemonPop](./public/assets/LemonPopMascote.png)  
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🎶 Sobre o Projeto  
+O **LemonPop** é um espaço dedicado a reunir e compartilhar as melhores playlists de **lofi** do YouTube.  
+A proposta é unir **design moderno + música relaxante**, criando uma experiência única para quem busca estudar, pensar, relaxar ou simplesmente aproveitar o dia.  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Mais que um site, o LemonPop é uma **marca** que mistura a calma do lofi com a energia vibrante de um limão fresco.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Categorias de Playlists  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 🎧 **Imersivas — Para Imaginar**  
+  *Mergulhe em atmosferas sonoras que despertam mundos dentro de você.*  
+  © LemonPop — Imaginação tem trilha sonora.  
 
-## Learn More
+- 🌌 **Contemplativas — Para Pensar**  
+  *Pensamentos profundos merecem música à altura.*  
+  © LemonPop — Onde o silêncio pensa com ritmo.  
 
-To learn more about Next.js, take a look at the following resources:
+- 📚 **Calmas — Para Estudar**  
+  *Foco sem esforço. Loops suaves para manter a mente leve e produtiva.*  
+  © LemonPop — O som do seu melhor momento de concentração.  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 🌞 **Dia de Sol — Para Aproveitar**  
+  *A vibe certa pro seu dia brilhar.*  
+  © LemonPop — Música boa com gosto de liberdade.  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 💡 Identidade da Marca  
 
-## Deploy on Vercel
+- **Nome:** LemonPop  
+- **Mascote:** Personagem estilo **chibi anime**, sorridente, com **boné e casaco amarelo-limão**.  
+- **Animal de referência:** ainda em estudo, buscando algo exótico e cativante (como o guaxinim do Chillhop).  
+- **Estilo visual:**  
+  - Dark mode moderno com detalhes em amarelo-limão  
+  - Atmosfera vibrante e acolhedora  
+  - Ícones chibi divertidos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🖥️ Estrutura do Site  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Home:** Destaque das playlists organizadas por categoria.  
+- **Categorias:** Página dedicada para cada vibe (Imaginar, Pensar, Estudar, Aproveitar).  
+- **Anuncie Aqui:** Espaço para marcas divulgarem produtos e serviços.  
+- **Sobre:** História da LemonPop e conceito da marca.  
+- **Contato:** Para parcerias e sugestões.
+
+## Nota Pessoal  
+
+> "Programar é a minha vibe — e o lofi é o que acalma meus pensamentos. Unir os dois é criar um mundo onde tudo faz sentido."  
+
+Essa é a essência do LemonPop: **código + música + criatividade**.  
+
+---
+
+## 🚀 Tecnologias Planejadas  
+
+- **Tecnologias:** Next + TypeScript + TailwindCSS  
+- **Banco de Dados:** Firebase  
+- **Hospedagem:** Firebase Hosting / Fire Store  
+- **Design:** Identidade visual criada em estilo chibi/anime  
