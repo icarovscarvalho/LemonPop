@@ -2,12 +2,13 @@
 
 ![Mascote LemonPop](./public/assets/LemonPopMascote.png)  
 
-
 ## 🎶 Sobre o Projeto  
 O **LemonPop** é um espaço dedicado a reunir e compartilhar as melhores playlists de **lofi** do YouTube.  
 A proposta é unir **design moderno + música relaxante**, criando uma experiência única para quem busca estudar, pensar, relaxar ou simplesmente aproveitar o dia.  
 
 Mais que um site, o LemonPop é uma **marca** que mistura a calma do lofi com a energia vibrante de um limão fresco.
+
+![Tela do Projeto LemonPop](./public/assets/LemonPopScreen.png)  
 
 ## ✨ Categorias de Playlists  
 
