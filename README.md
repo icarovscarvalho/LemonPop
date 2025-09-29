@@ -28,21 +28,26 @@ Mais que um site, o LemonPop é uma **marca** que mistura a calma do lofi com a 
   *A vibe certa pro seu dia brilhar.*  
   © LemonPop — Música boa com gosto de liberdade.  
 
-## 💡 Identidade da Marca  
+## 💡 Desenvolvimento do projeto
 
-- **Nome:** LemonPop  
-- **Mascote:** Personagem estilo **chibi anime**, sorridente, com **boné e casaco amarelo-limão**.  
-- **Animal de referência:** ainda em estudo, buscando algo exótico e cativante (como o guaxinim do Chillhop).  
-- **Estilo visual:**  
-  - Dark mode moderno com detalhes em amarelo-limão  
-  - Atmosfera vibrante e acolhedora  
-  - Ícones chibi divertidos
+Atualmente, o LemonPop encontra-se em fase de desenvolvimento e será disponibilizado em breve. Este projeto, concebido como parte de um portfólio, terá sua versão de consulta acessível ao público. No entanto, a versão oficial, que incluirá serviços de backend e integração com banco de dados, será mantida como privada.
+
+- **Sistema de Playlists:** O sistema de listas está funcionando e aos poucos serão implementadas novas features - (Concluído).
+- **Páginas a serem implementadas:**
+  - Homepage: Estrutura principal do projeto - (Concluído).
+  - Descubra: Página de playlist com categorias separadas para que o usuário possa navegar por diferentes estilos - (Em planejamento).
+  - Doação: Página de acesso para doação ao projeto por meios de pagamento online. - (Em planejamento).
+- **Header menu:** Atualmente o menu do Header não está funcionando pois depende da criação das paginas adicionais - (Em desenvolvimento).  
+- **Main Display menu:** As features contarão com presets de clima para ruído branco, pomodoro, chat ao vivo e listas adicionais - (Em planejamento).
+- **Sistema de envio de email:** A página com um formulário para envio de email e contato direto com o desenvolvedor. - (Em desenvolvimento).
+- **Escolha de idiomas:** Campo para que o usuário possa escolher seu idioma de prefência. - (Em estruturação).
 
 ## 🖥️ Estrutura do Site  
 
-- **Home:** Destaque das playlists organizadas por categoria.  
-- **Categorias:** Página dedicada para cada vibe (Imaginar, Pensar, Estudar, Aproveitar).  
-- **Anuncie Aqui:** Espaço para marcas divulgarem produtos e serviços.  
+- **Header:** Menus organizadas por paginas.
+- **Home:** Destaque das playlists organizadas por categoria. 
+- **Descubra:** Página dedicada para cada vibe (Imaginar, Pensar, Estudar, Aproveitar).  
+- **Login:** Espaço para o usuário gerenciar seu perfil e poder participar do chat ao vivo.  
 - **Sobre:** História da LemonPop e conceito da marca.  
 - **Contato:** Para parcerias e sugestões.
 
