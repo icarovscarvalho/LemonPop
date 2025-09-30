@@ -32,6 +32,7 @@ Mais que um site, o LemonPop é uma **marca** que mistura a calma do lofi com a 
 
 Atualmente, o LemonPop encontra-se em fase de desenvolvimento e será disponibilizado em breve. Este projeto, concebido como parte de um portfólio, terá sua versão de consulta acessível ao público. No entanto, a versão oficial, que incluirá serviços de backend e integração com banco de dados, será mantida como privada.
 
+- **Responsividade do site:** Site otimizado com Tailwind para melhor experiência do usuário nas versões desktop e mobile. - (Concluído).
 - **Sistema de Playlists:** O sistema de listas está funcionando e aos poucos serão implementadas novas features - (Concluído).
 - **Páginas a serem implementadas:**
   - Homepage: Estrutura principal do projeto - (Concluído).

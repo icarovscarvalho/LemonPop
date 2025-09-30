@@ -81,7 +81,7 @@ export function Main() {
             src={currentLink}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            className="rounded-xl aspect-3/2 md:w-[560px] md:h-[315px]"
+            className="rounded-xl aspect-3/2 md:w-full md:h-[315px]"
           />
         </div>
 

@@ -1,18 +1,13 @@
 export const toStudy = [
   {
-    channel: 'Lofi Girl',
-    music: 'lofi hip hop radio – beats to relax/study to',
-    link: 'https://www.youtube.com/embed/5qap5aO4i9A'
-  },
-  {
-    channel: 'Lofi Girl',
-    music: 'lofi hip hop radio – beats to study/relax to',
-    link: 'https://www.youtube.com/embed/7NOSDKb0HlU'
-  },
-  {
     channel: 'Dreamhop Music',
     music: 'Lazy Mornings 🎣 A Dreamy Lofi Mix',
     link: 'https://www.youtube.com/embed/kSl3VG-mzU4?si=fWjufTFzlz3nep1y',
+  },
+  {
+    channel: 'Chillhop Music',
+    music: 'lofi hip hop radio - beats to study/relax to 🐾',
+    link: 'https://www.youtube.com/embed/7NOSDKb0HlU'
   },
   {
     channel: 'Lofi Ghostie',

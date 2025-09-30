@@ -34,12 +34,12 @@ export function MainDisplay({handleChangePlayList}:MainDisplayProps) {
   ]
 
   return(
-    <div className="flex flex-col gap-2 p-2 w-full rounded-xl bg-white/70 shadow-md/20">
+    <div className="flex flex-col gap-2 p-2 w-full rounded-xl bg-white/70 shadow-md/20 xl:w-[500px]">
       <h2 className="text-xl">Outras Vibes</h2>
-      <div className="flex justify-between gap-2 h-full w-full overflow-auto">
+      <div className="flex flex-col justify-between gap-2 h-full w-full overflow-auto md:flex-row ">
         {playListData.map( item => 
-          <div key={item.text} className="group relative bg-zinc-900 rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-            <div className="relative overflow-hidden h-80">
+          <div key={item.text} className="group relative w-full  rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl ">
+            <div className="relative overflow-hidden h-60 md:h-80">
               <img 
                 src={`./assets/${item.img}.png`} 
                 alt={item.title} 
@@ -51,7 +51,7 @@ export function MainDisplay({handleChangePlayList}:MainDisplayProps) {
                   {item.icon}
                 </div>
               </div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+              <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ">
                 <button className="flex items-center justify-center gap-2 w-full bg-amber-400 text-white py-2 rounded-lg font-medium hover:bg-amber-500 transition-colors duration-300 cursor-pointer">
                   <p 
                     className="fas fa-shopping-cart "
@@ -66,10 +66,10 @@ export function MainDisplay({handleChangePlayList}:MainDisplayProps) {
               </div>
               <span className="absolute top-4 left-4 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full animate-pulse-slow">NEW</span>
             </div>
-            <div className="h-full w-full p-5">
+            <div className="h-full w-full p-5 bg-zinc-900">
               <div className="h-fit">
                 <div className="flex flex-col gap-2">
-                  <h3 className="text-lg font-bold text-amber-500 whitespace-normal break-words">{item.title}</h3>
+                  <h3 className="text-lg font-bold text-amber-500 whitespace-normal break-firebase ">{item.title}</h3>
                   <p className="text-white text-sm whitespace-normal break-words">{item.text}</p>
                 </div>
               </div>
