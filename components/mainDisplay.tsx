@@ -38,7 +38,14 @@ export function MainDisplay({handleChangePlayList}:MainDisplayProps) {
       <h2 className="text-xl">Outras Vibes</h2>
       <div className="flex flex-col justify-between gap-2 h-full w-full overflow-auto md:flex-row ">
         {playListData.map( item => 
-          <div key={item.text} className="group relative w-full  rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl ">
+          <div 
+            key={item.text}
+            onClick={() => {
+              handleChangePlayList(item.title)
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }}
+            className="group relative w-full  rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl cursor-pointer"
+          >
             <div className="relative overflow-hidden h-60 md:h-80">
               <img 
                 src={`./assets/${item.img}.png`} 
@@ -54,11 +61,11 @@ export function MainDisplay({handleChangePlayList}:MainDisplayProps) {
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ">
                 <button className="flex items-center justify-center gap-2 w-full bg-amber-400 text-white py-2 rounded-lg font-medium hover:bg-amber-500 transition-colors duration-300 cursor-pointer">
                   <p 
-                    className="fas fa-shopping-cart "
-                    onClick={() => {
-                      handleChangePlayList(item.title)
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
-                    }}
+                    // className="fas fa-shopping-cart "
+                    // onClick={() => {
+                    //   handleChangePlayList(item.title)
+                    //   window.scrollTo({ top: 0, behavior: 'smooth' })
+                    // }}
                   >
                     Ouça agora
                   </p>

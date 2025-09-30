@@ -41,7 +41,7 @@ export function Header() {
   }
 
   return(
-    <header className="flex flex-col items-center justify-center gap-5 w-full h-fit mb-[50px] p-[20px] shadow-md/20 bg-white/80 backdrop-blur-md md:flex-row md:justify-between md:rounded-4xl md:mt-[50px]">
+    <header className="flex flex-col items-center justify-center gap-5 w-full h-fit mb-[50px] p-[20px] shadow-md/20 bg-white/80 backdrop-blur-md lg:flex-row lg:justify-between lg:rounded-4xl lg:mt-[50px]">
       <div className="flex items-center justify-between w-[100%] md:w-fit">
         <img src="./assets/LemonPopLogo.png" alt="LemonPop Logo" className="w-[10rem]" />
         <IoIosMenu

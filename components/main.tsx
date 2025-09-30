@@ -75,7 +75,7 @@ export function Main() {
 
   return (
     <main className="flex flex-col itens-center justify-between gap-10 h-fit xl:flex-row">
-      <div className="flex flex-col gap-2 h-fit">
+      <div className="flex flex-col gap-2 h-fit md:min-w-160">
         <div>
           <iframe
             src={currentLink}
@@ -94,7 +94,7 @@ export function Main() {
             </div>
             <div className="flex gap-1  w-full">
               <p><strong>Música:</strong></p>
-              <p className="w-full">{currentMusic}</p>
+              <p className="truncate">{currentMusic}</p>
             </div>
           </div>
 
