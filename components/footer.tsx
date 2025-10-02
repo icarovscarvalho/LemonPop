@@ -36,7 +36,7 @@ export function Footer() {
     try {
       console.log("Dados enviados:", data);
 
-      toast.success("Mensagem enviada com sucesso!", {
+      toast.success("Esse sistema de envio de email ainda não está funcionando. Mas olha como vai ser legal quando estiver né!?", {
         position: "top-center",
         autoClose: 3000,
       });
@@ -76,10 +76,18 @@ export function Footer() {
           </div>
           {/* Social */}
           <div className="flex gap-5 text-2xl text-white">
-            <GoShareAndroid className="cursor-pointer transform transition duration-300 ease-in-out hover:translate-y-[-4px] active:scale-90" />
-            <FaLinkedin className="cursor-pointer transform transition duration-300 ease-in-out hover:translate-y-[-4px] active:scale-90" />
-            <FaGithub className="cursor-pointer transform transition duration-300 ease-in-out hover:translate-y-[-4px] active:scale-90" />
-            <FaUser className="cursor-pointer transform transition duration-300 ease-in-out hover:translate-y-[-4px] active:scale-90" />
+            <a href="#">
+              <GoShareAndroid className="cursor-pointer transform transition duration-300 ease-in-out hover:translate-y-[-4px] active:scale-90" />
+            </a>
+            <a href="https://www.linkedin.com/in/icarovscarvalho/" target="_Blank">
+              <FaLinkedin className="cursor-pointer transform transition duration-300 ease-in-out hover:translate-y-[-4px] active:scale-90" />
+            </a>
+            <a href="https://github.com/icarovscarvalho/" target="_Blank">
+              <FaGithub className="cursor-pointer transform transition duration-300 ease-in-out hover:translate-y-[-4px] active:scale-90" />
+            </a>
+            <a href="https://devicarocarvalho.web.app/" target="_Blank">
+              <FaUser className="cursor-pointer transform transition duration-300 ease-in-out hover:translate-y-[-4px] active:scale-90" />
+            </a>
           </div>
         </div>
       </div>
