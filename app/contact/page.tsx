@@ -1,10 +1,10 @@
-import { ShitFuck } from "../../components/shitFuck";
+// import { testAPI } from "../../components/testAPI";
 
 
-export default async function Contact() {
-  return(
-    <>
-      <ShitFuck />
-    </>
-  )
-}
+// export default async function Contact() {
+//   return(
+//     <>
+//       <TestAPI />
+//     </>
+//   )
+// }
