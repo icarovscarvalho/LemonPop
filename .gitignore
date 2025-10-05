@@ -1,8 +1,14 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# =========================================================
+# 🔧 GITIGNORE - Projeto Next.js + Firebase + TypeScript
+# =========================================================
+# Fonte: adaptado por Ícaro Carvalho (LemonPop)
+# =========================================================
 
-# dependencies
-/node_modules
-/.pnp
+# ------------------------------
+# ⚙️ Dependências e pacotes
+# ------------------------------
+node_modules/
+.pnp/
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -10,32 +16,63 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
+# ------------------------------
+# 🧪 Testes e cobertura
+# ------------------------------
+coverage/
 
-# next.js
-/.next/
-/out/
+# ------------------------------
+# ⚡ Next.js (build/output)
+# ------------------------------
+.next/
+out/
+build/
 
-# production
-/build
+# ------------------------------
+# 🔥 Firebase (hosting e functions)
+# ------------------------------
+.firebase/
+firebase-debug.log
+firebase-debug.*
+.firebaserc
+*.runtimeconfig.json
 
-# misc
+# ⚠️ NÃO versionar funções compiladas
+/functions/node_modules/
+/functions/lib/
+/functions/.output/
+/functions/.env*
+
+# ------------------------------
+# 🔑 Ambiente e credenciais
+# ------------------------------
+.env
+.env.*
+.env.local
+.env.development.local
+.env.production.local
+
+# ------------------------------
+# 🧩 Arquivos temporários do sistema
+# ------------------------------
 .DS_Store
-*.pem
+Thumbs.db
 
-# debug
+# ------------------------------
+# 🧠 TypeScript
+# ------------------------------
+*.tsbuildinfo
+next-env.d.ts
+
+# ------------------------------
+# 🧭 Logs e debug
+# ------------------------------
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# ------------------------------
+# ☁️ Vercel
+# ------------------------------
+.vercel/
