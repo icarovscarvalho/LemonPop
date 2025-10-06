@@ -8,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { title } from "process";
+import { Socials } from "./socials";
 
 const schema = z.object({
   title: z.string().min(3, "O título é obrigatório (mínimo 3 caracteres)"),
@@ -21,6 +22,13 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 export function Footer() {
+
+  const iconsData = [
+    // {link: "#", icon: GoShareAndroid},
+    {link: "https://www.linkedin.com/in/icarovscarvalho/", icon: FaLinkedin},
+    {link: "https://github.com/icarovscarvalho/", icon: FaGithub},
+    {link: "https://devicarocarvalho.web.app/", icon: FaUser},
+  ]
   const {
     register,
     handleSubmit,
@@ -84,18 +92,9 @@ export function Footer() {
         </div>
         {/* Social */}
         <div className="flex gap-5 text-2xl text-white">
-          <a href="#">
-            <GoShareAndroid className="cursor-pointer transform transition duration-300 ease-in-out hover:translate-y-[-4px] active:scale-90" />
-          </a>
-          <a href="https://www.linkedin.com/in/icarovscarvalho/" target="_Blank">
-            <FaLinkedin className="cursor-pointer transform transition duration-300 ease-in-out hover:translate-y-[-4px] active:scale-90" />
-          </a>
-          <a href="https://github.com/icarovscarvalho/" target="_Blank">
-            <FaGithub className="cursor-pointer transform transition duration-300 ease-in-out hover:translate-y-[-4px] active:scale-90" />
-          </a>
-          <a href="https://devicarocarvalho.web.app/" target="_Blank">
-            <FaUser className="cursor-pointer transform transition duration-300 ease-in-out hover:translate-y-[-4px] active:scale-90" />
-          </a>
+          {iconsData.map( (item, index) =>
+            <Socials key={index} link={item.link} social={item.icon} />  
+          )}
         </div>
       </div>
     </div>

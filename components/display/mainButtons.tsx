@@ -6,7 +6,7 @@ import {
 } from "react-icons/io5";
 import { FaRegCompass, FaCompass } from "react-icons/fa";
 import { HiAdjustmentsHorizontal, HiOutlineAdjustmentsHorizontal } from "react-icons/hi2";
-import { MdChatBubbleOutline, MdChatBubble } from "react-icons/md";
+// import { MdChatBubbleOutline, MdChatBubble } from "react-icons/md";
 import { useState } from "react";
 
 export function MainButtons() {
@@ -32,11 +32,11 @@ export function MainButtons() {
       hover: <IoTimer />,
       text: 'Pomo'
     },
-    {
-      icon: <MdChatBubbleOutline />,
-      hover: <MdChatBubble />,
-      text: 'Chat'
-    },
+    // {
+    //   icon: <MdChatBubbleOutline />,
+    //   hover: <MdChatBubble />,
+    //   text: 'Chat'
+    // },
   ]
 
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);

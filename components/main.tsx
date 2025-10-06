@@ -1,7 +1,7 @@
 'use client'
 
-import { MainButtons } from "./mainButtons";
-import { MainDisplay } from "./mainDisplay";
+import { MainButtons } from "./display/mainButtons";
+import { MainDisplay } from "./display/mainDisplay";
 
 import { toStudy } from "../utils/toStudy";
 import { toSunnyDays } from "../utils/toSunnyDays";
