@@ -40,7 +40,7 @@ Atualmente, o LemonPop encontra-se em fase de desenvolvimento e será disponibil
   - Doação: Página de acesso para doação ao projeto por meios de pagamento online. - (Em planejamento).
 - **Header menu:** Atualmente o menu do Header não está funcionando pois depende da criação das paginas adicionais - (Em desenvolvimento).  
 - **Main Display menu:** As features contarão com presets de clima para ruído branco, pomodoro, chat ao vivo e listas adicionais - (Em planejamento).
-- **Sistema de envio de email:** A página com um formulário para envio de email e contato direto com o desenvolvedor. - (Em desenvolvimento).
+- **Sistema de envio de email:** A página com um formulário para envio de email e contato direto com o desenvolvedor. - (Concluído).
 - **Escolha de idiomas:** Campo para que o usuário possa escolher seu idioma de prefência. - (Em estruturação).
 
 ## 🖥️ Estrutura do Site  
