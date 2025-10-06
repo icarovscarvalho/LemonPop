@@ -15,7 +15,7 @@ export function MainButtons() {
     {
       icon: <HiOutlineAdjustmentsHorizontal />,
       hover: <HiAdjustmentsHorizontal />,
-      text: 'Presets'
+      text: 'presets'
     },
     {
       icon: <IoMusicalNotesOutline />,
@@ -25,12 +25,12 @@ export function MainButtons() {
     {
       icon: <FaRegCompass />,
       hover: <FaCompass />,
-      text: 'Explore'
+      text: 'explore'
     },
     {
       icon: <IoTimerOutline />,
       hover: <IoTimer />,
-      text: 'Pomo'
+      text: 'pomo'
     },
     // {
     //   icon: <MdChatBubbleOutline />,
@@ -39,7 +39,13 @@ export function MainButtons() {
     // },
   ]
 
+  const [pathName, setPathName] = useState<string>('')
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
+
+  function pathHandleChange(path:string) {
+    setPathName(path)
+    window.history.pushState({}, '', path)
+  }
 
   return (
     <div className="flex justify-between flex-wrap-reverse text-4xl gap-6">
@@ -49,6 +55,7 @@ export function MainButtons() {
           className="flex flex-col items-center p-[5px] w-[70px] cursor-pointer rounded-md hover:bg-amber-400 hover:inset-shadow-sm active:scale-[0.95] transition duration-150"
           onMouseEnter={() => setHoverIndex(index)}
           onMouseLeave={() => setHoverIndex(null)}
+          onClick={() => pathHandleChange(il.text)}
         >
           {hoverIndex === index ? il.hover : il.icon}
           <p className="text-sm">{il.text}</p>

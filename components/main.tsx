@@ -140,7 +140,7 @@ export function Main() {
             </div>
           </details>
         </div>
-
+              
         <AdSpace />
         
       </div>
