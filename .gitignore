@@ -49,8 +49,12 @@ firebase-debug.*
 .env
 .env.*
 .env.local
+.env.development
 .env.development.local
+.env.production
 .env.production.local
+.env.test
+.env.test.local
 
 # ------------------------------
 # 🧩 Arquivos temporários do sistema
@@ -76,14 +80,3 @@ pnpm-debug.log*
 # ☁️ Vercel
 # ------------------------------
 .vercel/
-
-
-# 🔒 Variáveis de ambiente (segredos e chaves API)
-.env
-.env.local
-.env.development
-.env.development.local
-.env.production
-.env.production.local
-.env.test
-.env.test.local
