@@ -2,6 +2,7 @@
 
 import { Explore } from "./components/explore"
 import { usePathname } from "next/navigation"
+import { PomodoroTimer } from "./components/pomodoro"
 
 interface MainDisplayProps {
   handleChangePlayList: (playlist: string) => void
@@ -30,7 +31,7 @@ export function MainDisplay({ handleChangePlayList }: MainDisplayProps) {
     {
       path: 'pomo',
       title: 'Crie seu próprio tempo - Pomodoro',
-      component: <div>Vai vir um componente aqui</div>
+      component: <PomodoroTimer />
     },
     // {
     //   path: 'chat',
