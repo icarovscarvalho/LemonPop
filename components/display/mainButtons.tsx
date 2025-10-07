@@ -35,7 +35,7 @@ export function MainButtons() {
     // {
     //   icon: <MdChatBubbleOutline />,
     //   hover: <MdChatBubble />,
-    //   text: 'Chat'
+    //   text: 'chat'
     // },
   ]
 
@@ -46,6 +46,8 @@ export function MainButtons() {
     setPathName(path)
     window.history.pushState({}, '', path)
   }
+
+  
 
   return (
     <div className="flex justify-between flex-wrap-reverse text-4xl gap-6">
