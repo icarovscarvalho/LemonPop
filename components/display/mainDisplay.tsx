@@ -14,12 +14,12 @@ export function MainDisplay({ handleChangePlayList }: MainDisplayProps) {
 
   const paths = [
     {
-      path: 'presets',
+      path: 'predefinir',
       title: 'Configurações de ruído branco',
       component: <div>Vai vir um componente aqui</div>
     },
     {
-      path: 'music',
+      path: 'musicas',
       title: 'As melhores da Semana',
       component: <div>Vai vir um componente aqui</div>
     },
@@ -30,7 +30,7 @@ export function MainDisplay({ handleChangePlayList }: MainDisplayProps) {
     },
     {
       path: 'pomo',
-      title: 'Crie seu próprio tempo - Pomodoro',
+      title: 'Programe seus estudos - Pomodoro Timer',
       component: <PomodoroTimer />
     },
     // {
@@ -41,7 +41,7 @@ export function MainDisplay({ handleChangePlayList }: MainDisplayProps) {
   ]
 
   return (
-    <div className="flex flex-col gap-2 p-2 w-full rounded-xl bg-white/70 shadow-md/20 xl:w-[500px]">
+    <div className="flex flex-col items-center gap-2 p-2 w-full rounded-xl bg-white/70 shadow-md/20 xl:w-[500px]">
       {paths.map( item =>
         cutPathLink !== item.path
         ? ('')

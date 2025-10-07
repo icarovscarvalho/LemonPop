@@ -15,12 +15,12 @@ export function MainButtons() {
     {
       icon: <HiOutlineAdjustmentsHorizontal />,
       hover: <HiAdjustmentsHorizontal />,
-      text: 'presets'
+      text: 'predefinir'
     },
     {
       icon: <IoMusicalNotesOutline />,
       hover: <IoMusicalNotesSharp />,
-      text: 'music'
+      text: 'musicas'
     },
     {
       icon: <FaRegCompass />,

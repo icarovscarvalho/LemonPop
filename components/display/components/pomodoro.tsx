@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState, useEffect } from "react";
 import { FaPlay, FaPause, FaRedo } from "react-icons/fa";
 
@@ -12,6 +14,7 @@ interface Settings {
 }
 
 export function PomodoroTimer() {
+
   const [time, setTime] = useState<number>(25 * 60);
   const [isRunning, setIsRunning] = useState<boolean>(false);
   const [settings, setSettings] = useState<Settings>({
@@ -81,19 +84,19 @@ export function PomodoroTimer() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+    <div className="flex items-center justify-center p-4 h-fit bg-zinc-700 rounded-2xl">
       <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
         {/* Botões de modo */}
-        <div className="flex justify-center space-x-4 mb-8">
+        <div className="flex flex-col gap-2 items-center justify-center mb-8 md:flex-row md:space-x-4">
           <button
             className={`px-4 py-2 rounded-lg ${
               currentMode === "pomodoro"
-                ? "bg-red-500 text-white"
+                ? "bg-amber-500 text-black"
                 : "bg-gray-200"
             }`}
             onClick={() => handleModeChange("pomodoro")}
           >
-            Pomodoro
+            Custom Timer
           </button>
           <button
             className={`px-4 py-2 rounded-lg ${
@@ -118,7 +121,7 @@ export function PomodoroTimer() {
         </div>
 
         {/* Círculo e tempo */}
-        <div className="relative w-64 h-64 mx-auto mb-8">
+        <div className="relative w-40 h-64 mx-auto mb-8 md:w-64">
           <svg className="w-full h-full" viewBox="0 0 100 100">
             <circle
               className="text-gray-200 stroke-current"
@@ -142,7 +145,7 @@ export function PomodoroTimer() {
             />
           </svg>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <span className="text-6xl font-bold">{formatTime(time)}</span>
+            <span className="text-4xl font-bold md:text-6xl">{formatTime(time)}</span>
           </div>
         </div>
 
@@ -187,7 +190,7 @@ export function PomodoroTimer() {
                 min={1}
                 value={settings[mode]}
                 onChange={(e) => handleSettingChange(mode, e.target.value)}
-                className="w-20 p-2 border rounded"
+                className="w-15 p-2 border rounded"
               />
             </div>
           ))}
