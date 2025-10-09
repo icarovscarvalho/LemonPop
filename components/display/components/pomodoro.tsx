@@ -84,14 +84,14 @@ export function PomodoroTimer() {
   };
 
   return (
-    <div className="flex items-center justify-center p-4 h-fit bg-zinc-700 rounded-2xl">
-      <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
+    <div className="flex items-center justify-center p-4 h-fit">
+      <div className="bg-zinc-900 rounded-2xl shadow-xl p-8 w-full max-w-md">
         {/* Botões de modo */}
         <div className="flex flex-col gap-2 items-center justify-center mb-8 md:flex-row md:space-x-4">
           <button
-            className={`px-4 py-2 rounded-lg ${
+            className={`px-4 py-2 w-38 rounded-lg ${
               currentMode === "pomodoro"
-                ? "bg-amber-500 text-black"
+                ? "bg-amber-500 text-white"
                 : "bg-gray-200"
             }`}
             onClick={() => handleModeChange("pomodoro")}
@@ -99,7 +99,7 @@ export function PomodoroTimer() {
             Custom Timer
           </button>
           <button
-            className={`px-4 py-2 rounded-lg ${
+            className={`px-4 py-2 w-38 rounded-lg ${
               currentMode === "shortBreak"
                 ? "bg-green-500 text-white"
                 : "bg-gray-200"
@@ -109,7 +109,7 @@ export function PomodoroTimer() {
             Short Break
           </button>
           <button
-            className={`px-4 py-2 rounded-lg ${
+            className={`px-4 py-2 w-38 rounded-lg ${
               currentMode === "longBreak"
                 ? "bg-blue-500 text-white"
                 : "bg-gray-200"
@@ -144,7 +144,7 @@ export function PomodoroTimer() {
               transform="rotate(-90 50 50)"
             />
           </svg>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">
             <span className="text-4xl font-bold md:text-6xl">{formatTime(time)}</span>
           </div>
         </div>
@@ -178,7 +178,7 @@ export function PomodoroTimer() {
         <div className="space-y-4">
           {(["pomodoro", "shortBreak", "longBreak"] as Mode[]).map((mode) => (
             <div className="flex items-center justify-between" key={mode}>
-              <label className="font-medium">
+              <label className="font-medium text-white">
                 {mode === "pomodoro"
                   ? "Pomodoro Duration (minutes):"
                   : mode === "shortBreak"
@@ -190,7 +190,7 @@ export function PomodoroTimer() {
                 min={1}
                 value={settings[mode]}
                 onChange={(e) => handleSettingChange(mode, e.target.value)}
-                className="w-15 p-2 border rounded"
+                className="w-15 p-2 border border-[#fff] text-white rounded"
               />
             </div>
           ))}

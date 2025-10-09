@@ -9,6 +9,7 @@ import { HiAdjustmentsHorizontal, HiOutlineAdjustmentsHorizontal } from "react-i
 // import { MdChatBubbleOutline, MdChatBubble } from "react-icons/md";
 import { useState } from "react";
 
+
 export function MainButtons() {
 
   const iconsList = [
@@ -39,11 +40,10 @@ export function MainButtons() {
     // },
   ]
 
-  const [pathName, setPathName] = useState<string>('')
+  
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
 
   function pathHandleChange(path:string) {
-    setPathName(path)
     window.history.pushState({}, '', path)
   }
 

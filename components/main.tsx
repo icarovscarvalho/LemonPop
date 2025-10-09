@@ -9,6 +9,7 @@ import { toStopOverThink } from "../utils/toStopOverThink";
 
 import { useEffect, useState } from "react";
 import { AdSpace } from "./adSpace";
+import path from "path";
 
 type MusicItem = {
   channel: string;
@@ -30,6 +31,7 @@ export function Main() {
     {title: 'Imersivas — Para Imaginar', value: toStopOverThink},
     {title: 'Dia de Sol — Para Aproveitar', value: toSunnyDays},
   ]
+
 
   function handleChangePlayList(playList: string) {
     setCurrentPlayList(playList)
@@ -145,6 +147,7 @@ export function Main() {
         
       </div>
 
+      {/* Display */}
       <div className="flex flex-col justify-between gap-4 pt-4 h-fit">
         <MainButtons />
         <MainDisplay handleChangePlayList={handleChangePlayList} />

@@ -10,7 +10,7 @@ interface MainDisplayProps {
 
 export function MainDisplay({ handleChangePlayList }: MainDisplayProps) {
   const pathname = usePathname()
-  const cutPathLink = pathname.slice(1)
+  const cutPathLink = pathname.slice(1) || 'explore'
 
   const paths = [
     {
