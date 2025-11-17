@@ -87,7 +87,7 @@ export function Main() {
         </div>
 
         {/* Música atual */}
-        <div className="flex flex-col px-[10px] py-3 h-fit rounded-md bg-white">
+        <div className="flex flex-col px-[10px] py-3 h-fit rounded-md bg-white mb-5">
           <div className="flex flex-col pb-2 px-5">
             <div className="flex gap-1 max-w-[250px]">
               <p><strong>canal:</strong></p>
