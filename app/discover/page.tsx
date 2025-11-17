@@ -1,14 +1,14 @@
 'use client'
 
-import { MainButtons } from "./display/mainButtons";
-import { MainDisplay } from "./display/mainDisplay";
+import { MainButtons } from "../../components/display/mainButtons";
+import { MainDisplay } from "../../components/display/mainDisplay";
+import { AdSpace } from "../../components/adSpace";
 
-import { toStudy } from "../utils/toStudy";
-import { toSunnyDays } from "../utils/toSunnyDays";
-import { toStopOverThink } from "../utils/toStopOverThink";
+import { toStudy } from "../../utils/toStudy";
+import { toSunnyDays } from "../../utils/toSunnyDays";
+import { toStopOverThink } from "../../utils/toStopOverThink";
 
 import { useEffect, useState } from "react";
-import { AdSpace } from "./adSpace";
 
 type MusicItem = {
   channel: string;
@@ -16,7 +16,7 @@ type MusicItem = {
   link: string;
 };
 
-export function Main() {
+export default function Discover() {
 
   const [currentPlayList, setCurrentPlayList] = useState<string>('toStudy')
   const [currentList, setCurrentList] = useState<MusicItem[]>(toStudy)
@@ -74,7 +74,7 @@ export function Main() {
     console.log(currentPlayList)
   }, [currentPlayList])
 
-  return (
+  return(
     <main className="flex flex-col itens-center justify-between gap-10 h-fit xl:flex-row">
       <div className="flex flex-col gap-2 h-fit md:min-w-160">
         <div>
@@ -155,7 +155,7 @@ export function Main() {
           <a href="#">
             <button className="flex items-center justify-center gap-4 py-[5px] px-[20px] min-w-[200px] text-white rounded-4xl cursor-pointer bg-neutral-800 hover:text-yellow-500 active:scale-[0.95] hover:scale-102 transition">
               <p className="text-wrap">Me pague uma limonada</p>
-              <img src="/assets/LemonPopIcon.png" className="w-[30px] h-[30px]" />
+              <img src="./assets/LemonPopIcon.png" className="w-[30px] h-[30px]" />
             </button>
           </a>
         </div>

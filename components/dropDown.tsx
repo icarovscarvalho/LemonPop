@@ -12,7 +12,7 @@ export function DropDown({display, handleToggleLang}:DropDownProps) {
       {countrysList.map(cl => (
         <div key={cl.flag} className="flex gap-2 cursor-pointer" onClick={() => handleToggleLang(cl.flag, cl.lang)}>
           <p>{cl.lang}</p>
-          <img src={`./assets/Flag${cl.flag}.png`} alt={`${cl.flag} Lang Selected`} className="w-[20px]" />
+          <img src={`/assets/Flag${cl.flag}.png`} alt={`${cl.flag} Lang Selected`} className="w-[20px]" />
         </div>
       ))}
     </div>

@@ -26,7 +26,9 @@ export function NavBar({display, country, handleToggleLang, handleToggleButton, 
           <div className="flex items-center py-[7px] px-[5px] hover:bg-neutral-800 hover:text-white transition rounded-r-2xl hover:shadow-md/10 duration-300 ease-in-out cursor-pointer">
             <IoMdArrowDropdown onClick={handleToggleButton} />
             <div>
-              <img src={`./assets/Flag${country}.png`} alt={`${country} Lang Selected`} className="w-[20px]" />
+              {country && (
+                <img src={`/assets/Flag${country || 'Brazil'}.png`} alt={`${country || 'Brazil'} Lang Selected`} className="w-[20px]" />
+              )}
             </div>
           </div>
           <DropDown display={display} handleToggleLang={handleToggleLang} />
