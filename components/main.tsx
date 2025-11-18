@@ -75,7 +75,7 @@ export function Main() {
   }, [currentPlayList])
 
   return (
-    <main className="flex flex-col itens-center justify-between gap-10 h-fit xl:flex-row">
+    <main className="flex flex-col itens-center justify-between gap-10 w-fit h-fit xl:flex-row">
       <div className="flex flex-col gap-2 h-fit md:min-w-160">
         <div>
           <iframe
