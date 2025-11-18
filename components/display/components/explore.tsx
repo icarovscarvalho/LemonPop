@@ -25,12 +25,6 @@ export function Explore({handleChangePlayList}:MainDisplayProps) {
       text: 'Foco sem esforço. Loops suaves para manter a mente leve e produtiva — O som do seu melhor momento de concentração.',
       icon: <IoMusicalNotesSharp />,
     },
-    // {
-    //   img: 'PlayListImg4',
-    //   title: 'Contemplativas — Para Pensar',
-    //   text: 'Pensamentos profundos merecem música à altura. Deixe as ideias fluírem com cada batida — Onde o silêncio pensa com ritmo.',
-    //   icon: <IoMusicalNotesSharp />,
-    // },
   ]
 
   return(
@@ -46,7 +40,7 @@ export function Explore({handleChangePlayList}:MainDisplayProps) {
           >
             <div className="relative overflow-hidden h-60 md:h-80">
               <img 
-                src={`/assets/${item.img}.png`} 
+                src={`/assets/${item.img}.jpg`} 
                 alt={item.title} 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
