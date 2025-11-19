@@ -40,7 +40,7 @@ export function Explore({handleChangePlayList}:MainDisplayProps) {
           >
             <div className="relative overflow-hidden h-60 md:h-80">
               <img 
-                src={`/assets/${item.img}.jpg`} 
+                src={`/assets/${item.img}.webp`} 
                 alt={item.title} 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />

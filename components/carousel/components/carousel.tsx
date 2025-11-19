@@ -6,8 +6,18 @@ import { IoMusicalNotesSharp } from "react-icons/io5";
 
 import { bannerPlayListData } from "../../../utils/bannerPlayLists"
 
+interface Music {
+  channel: string;
+  music: string;
+  link: string;
+}
 
-export function Carousel() {
+interface CarouselProps{
+  handleChangePlayList: (music: Music[], title: string, text: string) => void
+}
+
+
+export function Carousel({handleChangePlayList}:CarouselProps) {
 
   let [active, setActive] = useState<number>(2);
 
@@ -24,9 +34,6 @@ export function Carousel() {
       zIndex: 10 - Math.abs(offset),
     };
   };
-
-  console.log(active)
-  console.log(bannerPlayListData.length)
 
   function nextBtn() {
     if(active <= (bannerPlayListData.length - 2)){
@@ -46,18 +53,18 @@ export function Carousel() {
       <div className="w-full h-fit flex flex-col items-center">
 
         {/* CARDS */}
-        <div className="relative flex items-start justify-center min-h-[480px] md:h-[550px] w-full overflow-hidden perspective-[500px]">
+        <div className="relative flex items-start justify-center min-h-[480px] md:h-[575px] w-full overflow-hidden perspective-[500px]">
           {bannerPlayListData.map((item, i) => (
             <div
               key={item.title}
               onClick={() => setActive(i)}
-              className="absolute bg-zinc-900 border-2 border-amber-500 rounded-2xl shadow-xl w-[450px] max-w-[20rem] transition-transform cursor-pointer overflow-hidden"
+              className="absolute bg-zinc-900 border-2 border-amber-500 rounded-2xl shadow-xl w-[450px] max-w-[20rem] transition-transform overflow-hidden"
               style={getTransform(i)}
             >
               {/* CARD IMAGEM */}
               <div className="relative overflow-hidden h-60 md:h-80">
                 <img
-                  src={`/assets/${item.img}.jpg`}
+                  src={`/assets/${item.img}.webp`}
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                 />
@@ -80,7 +87,10 @@ export function Carousel() {
                 <h3 className="text-lg font-bold text-amber-500">{item.title}</h3>
                 <p className="text-white text-sm">{item.text}</p>
 
-                <button className="mt-4 flex items-center justify-center w-full bg-amber-400 text-white py-2 rounded-lg font-medium hover:bg-amber-500 transition-colors">
+                <button 
+                  className="mt-4 flex items-center justify-center w-full bg-amber-400 text-white py-2 rounded-lg font-medium hover:bg-amber-500 transition-colors cursor-pointer"
+                  onClick={() => handleChangePlayList(item?.musics ?? [], item.title, item.text)}
+                >
                   Ouça agora
                 </button>
               </div>

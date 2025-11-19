@@ -89,17 +89,81 @@ export const bannerPlayListData = [
         music: 'Relaxing Café Vibes ☕ + Sunny Morning ☀️',
         link: 'https://www.youtube.com/embed/7NOSDKb0HlU',
       }
-    ]
+    ],
   },
   {
     img: 'PlayListImg2',
     title: 'Imersivas — Para Imaginar',
     text: 'Mergulhe em atmosferas sonoras que despertam mundos dentro de você. Solte a mente, flutue nas notas — Imaginação tem trilha sonora.',
+    musics: [
+      {
+        channel: 'Some Lofi / ambient mix',
+        music: 'Rest Your Mind Lofi Hip-Hop Music || Relaxing Background',
+        link: 'https://www.youtube.com/embed/z22tv0jjr94'
+      },
+      {
+        channel: 'Caspianc16',
+        music: 'Witcher & Chill – Chill Beats & Relaxing Lofi from The Witcher',
+        link: 'https://www.youtube.com/embed/Qi8am-GoWjc'
+      },
+      {
+        channel: 'Dreamhop Music',
+        music: 'Stop Overthinking 🌘 Calm Down And Relax [ Chill Lofi Hip Hop Beats ] 🌘 Sweet Girl',
+        link: 'https://www.youtube.com/embed/k__gEeVPiLg?si=wODEa9HO6GeOKLKm',
+      },
+      {
+        channel: 'Sweet Girl',
+        music: 'Find your calm with peaceful lofi ☘ Chillhop melodies 🌱 Sleep/focus/relax [Space girl radio]',
+        link: 'https://www.youtube.com/embed/3l4vT5t4zMM?si=Otnup-oDev4J4-rK',
+      }
+    ]
   },
   {
     img: 'PlayListImg3',
     title: 'Calmas — Para Estudar',
     text: 'Foco sem esforço. Loops suaves para manter a mente leve e produtiva — O som do seu melhor momento de concentração.',
+    musics: [
+      {
+        channel: 'Dreamhop Music',
+        music: 'Lazy Mornings 🎣 A Dreamy Lofi Mix',
+        link: 'https://www.youtube.com/embed/kSl3VG-mzU4?si=fWjufTFzlz3nep1y',
+      },
+      {
+        channel: 'Chillhop Music',
+        music: 'lofi hip hop radio - beats to study/relax to 🐾',
+        link: 'https://www.youtube.com/embed/7NOSDKb0HlU'
+      },
+      {
+        channel: 'Lofi Ghostie',
+        music: '3:30 AM Coding Session - Lofi Hip Hop Mix [Study & Coding Beats]',
+        link: 'https://www.youtube.com/embed/8nXqcugV2Y4?si=zxDUSKtGBBNexg78',
+      },
+      {
+        channel: 'Cosmic Hippo',
+        music: '3 A.M Coding Session - Chillstep Beats to Keep You Going',
+        link: 'https://www.youtube.com/embed/Yd7vDterctQ?si=kvC-HAwLLC6LkqKQ',
+      },
+      {
+        channel: 'Lofi boost your mood',
+        music: 'CODING VIBES 💻 Coding Beats 2023 ~ Lofi Playlist for Programming / Relax / Chill',
+        link: 'https://www.youtube.com/embed/v9XyIGXcRck?si=spNz62_peQIb_cSn',
+      },
+      {
+        channel: 'The AMP Channel',
+        music: 'code-fi / lofi beats to code/relax to',
+        link: 'https://www.youtube.com/embed/f02mOEt11OQ?si=mVHtznxxn_T3NFtJ',
+      },
+      {
+        channel: 'ChilledCow Archive',
+        music: 'Rainy Day Coding ☔️ lofi hip hop beats to focus',
+        link: 'https://www.youtube.com/embed/DWcJFNfaw9c',
+      },
+      {
+        channel: 'Study With Me',
+        music: 'Deep Focus 🎧 lofi hip hop beats to help you study',
+        link: 'https://www.youtube.com/embed/7NOSDKb0HlU',
+      }
+    ],
   },
   {
     img: 'PlayListImg4',
