@@ -3,9 +3,7 @@
 import { MainButtons } from "./display/mainButtons";
 import { MainDisplay } from "./display/mainDisplay";
 
-import { toStudy } from "../utils/toStudy";
-import { toSunnyDays } from "../utils/toSunnyDays";
-import { toStopOverThink } from "../utils/toStopOverThink";
+import { bannerPlayListData } from "../utils/bannerPlayLists";
 
 import { useEffect, useState } from "react";
 import { AdSpace } from "./adSpace";
@@ -15,6 +13,10 @@ type MusicItem = {
   music: string;
   link: string;
 };
+
+const toSunnyDays: MusicItem[] = bannerPlayListData[0].musics ?? [];
+const toStopOverThink: MusicItem[] = bannerPlayListData[1].musics ?? [];
+const toStudy: MusicItem[] = bannerPlayListData[2].musics ?? [];
 
 export function Main() {
 
@@ -75,7 +77,7 @@ export function Main() {
   }, [currentPlayList])
 
   return (
-    <main className="flex flex-col itens-center justify-between gap-10 w-fit h-fit xl:flex-row">
+    <main className="flex flex-col itens-center justify-between gap-10 w-full h-fit xl:flex-row">
       <div className="flex flex-col gap-2 h-fit md:min-w-160">
         <div>
           <iframe

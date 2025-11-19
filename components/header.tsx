@@ -39,21 +39,23 @@ export function Header() {
   }
 
   return(
-    <header className="flex flex-col items-center justify-center gap-5 w-full h-fit mb-[50px] p-[20px] shadow-md/20 bg-white/80 backdrop-blur-md lg:flex-row lg:justify-between lg:rounded-4xl lg:mt-[50px]">
-      <div className="flex items-center justify-between w-[100%] md:w-fit">
-        <img src="/assets/LemonPopLogo.png" alt="LemonPop Logo" className="w-[10rem]" />
-        <IoIosMenu
-        onClick={handleToggleMenuButton}
-          className="text-3xl hover:scale-105 cursor-pointer md:hidden"
+    <header className="fixed w-full lg:max-w-[1500px] lg:px-[10vw] z-1">
+      <div className="flex flex-col items-center justify-center gap-5 w-full h-fit mb-[50px] p-[20px] shadow-md/20 bg-white/80 backdrop-blur-md lg:flex-row lg:justify-between lg:rounded-4xl lg:mt-[50px]">
+        <div className="flex items-center justify-between w-[100%] md:w-fit">
+          <img src="/assets/LemonPopLogo.png" alt="LemonPop Logo" className="w-[10rem]" />
+          <IoIosMenu
+          onClick={handleToggleMenuButton}
+            className="text-3xl hover:scale-105 cursor-pointer md:hidden"
+          />
+        </div>
+        <NavBar
+          display={display}
+          country={country}
+          handleToggleLang={handleToggleLang}
+          handleToggleButton={handleToggleButton}
+          menuMobileButton={menu}
         />
       </div>
-      <NavBar
-        display={display}
-        country={country}
-        handleToggleLang={handleToggleLang}
-        handleToggleButton={handleToggleButton}
-        menuMobileButton={menu}
-      />
     </header>
   )
 }

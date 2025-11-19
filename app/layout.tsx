@@ -24,9 +24,8 @@ export default function RootLayout({
       <body
         className={`${jetBrainsMono.variable} antialiased flex flex-col items-center justify-betwee relative h-fit select-none`}
       >
-        <div className="fixed w-full lg:max-w-[1500px] lg:px-[10vw] z-1">
-          <Header />
-        </div>
+        
+        <Header />
 
         {children}
 
