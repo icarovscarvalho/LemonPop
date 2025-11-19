@@ -7,18 +7,14 @@ type Music = {
   link: string;
 }
 
-type Info = {
-  title: string;
-  text: string;
-}
-
 interface MusicListProps{
+  handleChangeMusicOnPlayList: (music: string) => void;
   playListChoosed: Music[];
   getTitle: string;
   getText: string;
 }
 
-export function MusicList({playListChoosed, getTitle, getText}:MusicListProps) {
+export function MusicList({handleChangeMusicOnPlayList, playListChoosed, getTitle, getText}:MusicListProps) {
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
 
@@ -41,7 +37,10 @@ export function MusicList({playListChoosed, getTitle, getText}:MusicListProps) {
         {songsList.map((music, index) => (
           <div
             key={index}
-            onClick={() => setSelectedIndex(index)}
+            onClick={() => {
+              setSelectedIndex(index)
+              handleChangeMusicOnPlayList(music.link)}
+            }
             className={`p-3 rounded-md cursor-pointer transition-colors ${selectedIndex === index ? "bg-amber-200" : "bg-gray-100"}`}
           >
             <div className="flex gap-1">

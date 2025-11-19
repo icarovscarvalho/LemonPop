@@ -13,7 +13,12 @@ interface Music {
 }
 
 interface CarouselProps{
-  handleChangePlayList: (music: Music[], title: string, text: string) => void
+  handleChangePlayList: (
+    music: Music[],
+    title: string,
+    text: string,
+    link: string,
+  ) => void
 }
 
 
@@ -89,7 +94,12 @@ export function Carousel({handleChangePlayList}:CarouselProps) {
 
                 <button 
                   className="mt-4 flex items-center justify-center w-full bg-amber-400 text-white py-2 rounded-lg font-medium hover:bg-amber-500 transition-colors cursor-pointer"
-                  onClick={() => handleChangePlayList(item?.musics ?? [], item.title, item.text)}
+                  onClick={() => handleChangePlayList(
+                    item?.musics ?? [],
+                    item.title,
+                    item.text,
+                    item.musics?.[0]?.link ?? '',
+                  )}
                 >
                   Ouça agora
                 </button>
