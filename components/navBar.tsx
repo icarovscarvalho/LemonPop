@@ -31,11 +31,11 @@ export function NavBar({display, country, handleToggleLang, handleToggleButton, 
     <nav className={`flex gap-2 justify-items-center ${menuMobileButton} md:flex`}>
       <div className="flex flex-col md:flex-row gap-5">
         {menus.map( item =>
-          <a href={`http://localhost:3000/${item.page}`} key={item.btn} className="py-[5px] px-[10px] hover:bg-yellow-500 transition rounded-2xl hover:shadow-md/10 hover:-translate-y-0.5 duration-300 ease-in-out">{item.btn}</a>
+          <a href={`/${item.page}`} key={item.btn} className="py-[5px] px-[10px] hover:bg-yellow-500 transition rounded-2xl hover:shadow-md/10 hover:-translate-y-0.5 duration-300 ease-in-out">{item.btn}</a>
         )}
         <div className="relative flex items-center h-fit border border-white hover:border-neutral-800 rounded-3xl"
         >
-          <a href="http://localhost:3000/login">
+          <a href="/login">
             <p className="py-[5px] px-[10px] hover:bg-neutral-800 hover:text-white transition rounded-l-2xl hover:shadow-md/10 duration-200 ease-out cursor-pointer">
               Login
             </p>
